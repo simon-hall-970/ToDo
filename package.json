@@ -2,9 +2,14 @@
   "name": "ToDo",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "run-p watch:client watch:server",
+    "watch:client": "webpack --watch",
+    "watch:server": "nodemon --watch server",
+    "start": "node server",
+    "test": "jest --noStackTrace --watchAll",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,12 +22,41 @@
     "url": "https://github.com/simon-hall-970/ToDo/issues"
   },
   "homepage": "https://github.com/simon-hall-970/ToDo#readme",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+    "@babel/plugin-proposal-class-properties",
+    "@babel/plugin-proposal-object-rest-spread"
+    ]
+  },
+"jest": {
+  "setupFiles": [
+    "./tests/client/setup-enzyme.js"
+  ]
+},
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
-    "redux": "^4.0.5"
+    "redux": "^4.0.5",
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
-    "redux-devtools": "^3.5.0"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "redux-devtools": "^3.5.0",
+    "supertest": "^4.0.2",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "npm-run-all": "^4.1.5"
   }
 }
