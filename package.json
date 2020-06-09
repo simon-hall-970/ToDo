@@ -1,0 +1,28 @@
+{
+  "name": "ToDo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simon-hall-970/ToDo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/simon-hall-970/ToDo/issues"
+  },
+  "homepage": "https://github.com/simon-hall-970/ToDo#readme",
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5"
+  },
+  "devDependencies": {
+    "redux-devtools": "^3.5.0"
+  }
+}
