@@ -3,7 +3,7 @@ import React from 'react'
 const App = () => (
     <>
         <div id="app" className="app">
-            ToDo Started
+            To Do List
         </div>
     </>
 )
