@@ -8,4 +8,22 @@ export function getList() {
     .then(res => res.body)
 }
 
+export function addTask(task) {
+    return request
+    .post(taskListUrl)
+    .send(task)
+    .then(res => res.body)
+}
 
+export function markComplete(taskId, completionStatus) {
+    return request
+    .put(`${taskListUrl}complete/${taskId}/`)
+    .send(completionStatus)
+    .then(res => res.body)
+}
+
+export function deleteTask(taskId) {
+    return request
+    .delete(taskListUrl+taskId)
+    .then(res => res.body)
+}
