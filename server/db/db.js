@@ -31,7 +31,7 @@ function updateTask (id, updateTaskObj) {
 function markCompleted (id, completionStatus) {
     return db('tasks')
     .where('id', id)
-    .update('copmpleted', completionStatus)
+    .update('completed', completionStatus)
 }
 
 module.exports = {
