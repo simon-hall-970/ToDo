@@ -1,9 +1,13 @@
 import React from 'react'
 
+import ErrorMessage from './ErrorMessage'
+import Header from './Header'
+
 const App = () => (
     <>
         <div id="app" className="app">
-            To Do List
+            <ErrorMessage />
+            <Header />
         </div>
     </>
 )

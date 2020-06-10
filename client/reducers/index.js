@@ -1,7 +1,7 @@
 import {combineReducers} from 'redux'
 
-//import reducers
+import errorMessage from './error-message'
 
 export default combineReducers({
-    //add reducers
+    errorMessage,
 })
