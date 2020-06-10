@@ -11,7 +11,6 @@ function ToDoItem(props) {
     }
     
     const delTask = () => {
-        console.log(props.id)
         props.delTask(props.id)
     }
 

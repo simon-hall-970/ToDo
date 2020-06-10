@@ -55,7 +55,7 @@ router.put('/update/:id', (req, res) => {
 router.delete('/:id', (req, res) => {
     const id=req.params.id
     db.removeTask(id)
-    .then(delTAsk => {
+    .then(delTask => {
         res.json({})
     })
     .catch(err => {

@@ -274,7 +274,6 @@ function ToDoItem(props) {
   };
 
   var delTask = function delTask() {
-    console.log(props.id);
     props.delTask(props.id);
   };
 
@@ -365,14 +364,14 @@ var TodoList = /*#__PURE__*/function (_React$Component) {
       task: '',
       description: '',
       priority: 0,
-      completed: 'false'
+      completed: false
     });
 
     _defineProperty(_assertThisInitialized(_this), "defaultState", {
       task: '',
       description: '',
       priority: 0,
-      completed: 'false'
+      completed: false
     });
 
     _defineProperty(_assertThisInitialized(_this), "taskInputField", function (evt) {

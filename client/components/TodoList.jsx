@@ -12,13 +12,13 @@ class TodoList extends React.Component {
         task: '',
         description: '',
         priority: 0,
-        completed: 'false'
+        completed: false
     }
     defaultState = {
         task: '',
         description: '',
         priority: 0,
-        completed: 'false'
+        completed: false
     }
     componentDidMount(){
         this.props.dispatch(fetchList())
