@@ -1,9 +1,9 @@
 exports.seed = function(knex) {
     // Deletes ALL existing entries
-    return knex('todos').del()
+    return knex('todo').del()
       .then(function () {
         // Then inserts seed entries
-        return knex('todos').insert([
+        return knex('todo').insert([
           {id: 1, task: 'Design database', description: '', priority: 1, completed: true},
           {id: 2, task: 'Build migrations and seed data', description: '', priority: 2, completed: true},
           {id: 3, task: 'Build an API to list add update and delete', description: '', priority: 3, completed: false},
